@@ -114,7 +114,7 @@ VALUE wMax31855_fetch(VALUE self)
 		if (internal_raw & 0x0001)
 			strcat(message, "Open Circuit");
 
-		rb_raise(rb_eStandardError, message);
+		rb_raise(rb_eStandardError, "Sensor error: %s", message);
 
 		return Qnil;
 	} else {
